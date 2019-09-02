@@ -3,7 +3,7 @@
     @section('content')
     <div class = "container">
     @include('inc.message')
-        <img src="/junecrud/public/storage/cover_image/{{$post->cover_image}}" alt="No image" class = "rounded-circle w-25 p-2">
+        <img src="{{asset('storage/cover_image/'.$post->cover_image)}}" alt="No image" class = "rounded-circle w-25 p-2">
     </div>
         <div class="container">
             

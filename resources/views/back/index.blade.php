@@ -12,7 +12,7 @@
                 
                     <div class="col-md-3 col-sm-3">
 
-                    <img src="storage/cover_image/{{$posts->cover_image}}" alt="No image" class = "rounded-circle w-50">
+                    <img src="{{asset('storage/cover_image/'.$posts->cover_image)}}" alt="No image" class = "rounded-circle w-50">
 
                     </div>
 
