@@ -1,1 +1,1 @@
-This is a website with a blog session developed with Laravel version 5.8. The front-end design still in progress.
+This is a simple forum developed with Laravel version 5.8. It allows user to register, login and write any article of their choice for the public to see. Users can also control their posts in their respective dashboard.
