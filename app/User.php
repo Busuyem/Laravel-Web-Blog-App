@@ -30,11 +30,8 @@ class User extends Authenticatable
     ];
 
     public function posts(){
+        
         return $this->hasMany(Post::Class);
     }
-
-    public function admin(){
-
-        return $this->belongsTo(Admin::Class);
-    }
+    
 }

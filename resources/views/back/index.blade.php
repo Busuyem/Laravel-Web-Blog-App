@@ -1,42 +1,26 @@
 @extends('layouts.app')
-@section('title', 'All blog posts')
+@section('title', 'All Forum posts')
     @section('content')
            
         <div class="container">
-            <div class="container col-md-8">
-                 @include('inc.message')
-           </div>
-            <h2 class= "text-center" >All Posts</h2>
-                @foreach($post as $posts)
-                <div class="row">
+            @include('inc.message')
+           <h2 class= "text-center text-success py-2" id = "allPost">Read All Posts</h2>
+                @foreach($posts as $post)
+                    @foreach($users as $user)
+              <div class="card my-2">
+              
+                    <div class="card-header bg-secondary col-sm-5" id = "post-head">
+                        <img src="{{asset('storage/'.$post->cover_image)}}" alt="No image" class = "rounded-circle w-25 float-right">
+                            <h4><a href="{{route('posts.show', $post->id)}}" id = "post-head-header">{{$post->title}} </a><small><b> written by {{$user->name}} </b> </small></h4> <small><b> on {{ $post->created_at->format('j M Y H:i:s A ')}}</b></small>  
+                        </div>
+                        <div class="card-body">
+                            <p> {{$post->body}}</p>
+                        </div>
                 
-                    <div class="col-md-3 col-sm-3">
-
-                    <img src="{{asset('storage/cover_image/'.$posts->cover_image)}}" alt="No image" class = "rounded-circle w-50">
-
-                    </div>
-
-
-
-
-                <div class="col-md-9 col-sm-9">
-            
-                <div class="card">
-                    <div class="card-header bg-light">
-                        <h4><a href="{{route('posts.show', $posts->id)}}" >{{$posts->title}} </a><small><b> written by {{$posts->user->name}} </b> </small></h4> <small> on {{$posts->created_at}}</small>  
-                    </div>
-                    <div class="card-body">
-                        <p> {{$posts->body}}</p>
-                    </div>
-                
-                </div>
-                </div>
-                <br />
-               
-                </div>
-                @endforeach
-               <div class = "container col-md-4 pt-3"> {{$post->links()}}</div>
+            </div>
+                 @endforeach
+            @endforeach
+             <div class = "container col-md-4 p-2">{{$posts->links()}}</div>
         </div>
-
         
     @endsection

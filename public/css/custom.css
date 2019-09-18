@@ -1,7 +1,7 @@
 body{
     margin: 0 auto;
     padding: 0;
-    background-color: steelblue;
+    background-color: #f5f5f5;
 }
 
 
@@ -17,4 +17,59 @@ body{
 #carocap{
     text-align: center;
     padding:250px;
+}
+#post-head{
+    background-color: rgb(88, 134, 35) !important;
+    color:white;
+}
+
+#post-head-header{
+   
+    font-weight:bold;
+    color:rgb(233, 233, 16);
+}
+
+#allPost{
+    background:rgb(88, 134, 35) !important;
+    margin-top:5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(233, 233, 16) !important;
+
+}
+
+#navbar-navy{
+    background:rgb(88, 134, 35) !important;
+    font-weight: bold;
+    text-decoration-color: white !important;
+}
+
+#navbar-navy{
+    color:white !important;
+}
+
+#laraforum {
+    color: rgb(250, 244, 244);
+    font-size: 30px;
+    font-family: fantasy;
+}
+
+#laranav{
+    color: rgb(250, 244, 244) !important;
+    line-height: 2rem;
+    font-size: 20px;
+}
+
+#icon{
+    border: 1px solid white !important;
+}
+
+#post-header{
+    color: rgb(233, 233, 16) !important;
+}
+
+#navbarDropdown{
+    color: rgb(250, 244, 244) !important;
+    line-height: 2rem;
+    font-size: 20px;
 }

@@ -12,7 +12,6 @@
 */
 
 
-
 Route::get('/', 'PagesController@home')->name('home');
 Route::get('/about', 'PagesController@about')->name('about');
 Route::get('/contact', 'PagesController@contact')->name('contact');
@@ -23,7 +22,7 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
-Route::get('/admin', 'AdminController@getUsers');
+Route::get('/admin', 'AdminController@index');
 
 
 
